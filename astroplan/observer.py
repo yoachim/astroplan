@@ -113,7 +113,8 @@ class Observer(object):
     @u.quantity_input(elevation=u.m)
     def __init__(self, location=None, timezone='UTC', name=None, latitude=None,
                  longitude=None, elevation=0*u.m, pressure=None,
-                 relative_humidity=None, temperature=None, description=None):
+                 relative_humidity=None, temperature=None, seeing=None,
+                 description=None):
         """
         Parameters
         ----------
@@ -143,6 +144,9 @@ class Observer(object):
 
         temperature : `~astropy.units.Quantity` (optional)
             The ambient temperature.
+
+        seeing : float (optional)
+            The seeing FWHM in arcseconds.
 
         timezone : str or `datetime.tzinfo` (optional)
             The local timezone to assume. If a string, it will be passed

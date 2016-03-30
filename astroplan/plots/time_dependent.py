@@ -45,6 +45,30 @@ def _has_twin(ax):
     return False
 
 
+def plot_snr(target, observer, time, ax=None, style_kwargs=None,
+             style_sheet=None, brightness_shading=False,
+             altitude_yaxis=False, filter_name='g'):
+    """
+    Plot the signal to noise ratio of a taret as a function of time.
+
+
+    Parameters
+    ----------
+
+    filter_name : str ('g')
+        one of ugrizy.
+
+    """
+
+    # XXX
+    # maybe update target to include a magnitude atribute?
+    # update observer to include seeing?--DONE
+
+    #
+
+
+
+
 def plot_airmass(target, observer, time, ax=None, style_kwargs=None,
                  style_sheet=None, brightness_shading=False,
                  altitude_yaxis=False):

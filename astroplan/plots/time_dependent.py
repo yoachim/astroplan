@@ -45,9 +45,10 @@ def _has_twin(ax):
     return False
 
 
-def plot_snr(target, observer, time, ax=None, style_kwargs=None,
+def plot_snr(targets, observer, time, ax=None, style_kwargs=None,
              style_sheet=None, brightness_shading=False,
-             altitude_yaxis=False, filter_name='g'):
+             altitude_yaxis=False, filter_name='g', norm_max=False, 
+             norm_each=False):
     """
     Plot the signal to noise ratio of a taret as a function of time.
 
@@ -64,7 +65,9 @@ def plot_snr(target, observer, time, ax=None, style_kwargs=None,
     # maybe update target to include a magnitude atribute?
     # update observer to include seeing?--DONE
 
-    #
+    # Include option to normalize the snr of each object, or the snr of the best target.
+
+    
 
 
 

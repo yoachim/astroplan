@@ -67,7 +67,15 @@ def plot_snr(targets, observer, time, ax=None, style_kwargs=None,
 
     # Include option to normalize the snr of each object, or the snr of the best target.
 
-    
+    # make the time array
+
+    sky_brightnesses = np.zeros((len(targets,times.size)), dtype=float)
+
+    # make a sky_brightness class that takes targets, observer and time.
+    # Maybe 
+
+    for i,timepoint in enumerate(times):
+        sky_brightnesses[:,i] = sb_model(targets, observer, timepoint, filter_name=filter_name)
 
 
 
